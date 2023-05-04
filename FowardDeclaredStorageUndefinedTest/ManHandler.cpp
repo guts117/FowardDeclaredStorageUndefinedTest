@@ -16,6 +16,9 @@ ManHandler::ManHandler() : m_pImpl{ Impl() } {}
 
 ManHandler::~ManHandler() = default;
 
+ManHandler::ManHandler(ManHandler&& rhs) noexcept = default;
+ManHandler& ManHandler::operator=(ManHandler&& rhs) noexcept = default;
+
 void ManHandler::AddMan() 
 {
 	Pimpl().AddMan();

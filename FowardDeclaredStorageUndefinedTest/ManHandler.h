@@ -6,8 +6,8 @@ class ManHandler
 public:
 	explicit ManHandler();
 
-	ManHandler(ManHandler&& rhs) noexcept = default;
-	ManHandler& operator=(ManHandler&& rhs) noexcept = default;
+	ManHandler(ManHandler&& rhs) noexcept;
+	ManHandler& operator=(ManHandler&& rhs) noexcept;
 
 	ManHandler(const ManHandler& rhs) noexcept = delete;
 	ManHandler& operator=(const ManHandler& rhs) = delete;

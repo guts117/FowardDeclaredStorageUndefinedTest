@@ -5,8 +5,8 @@ class Man
 public:
 	explicit Man() = delete;
 	
-	Man(Man&& rhs) noexcept = default;
-	Man& operator=(Man&& rhs) noexcept = default;
+	Man(Man&& rhs) noexcept;
+	Man& operator=(Man&& rhs) noexcept;
 	
 	Man(const Man& rhs) noexcept = delete;
 	Man& operator=(const Man& rhs) = delete;
