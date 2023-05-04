@@ -4,7 +4,7 @@
 class ManHandler
 {
 public:
-	ManHandler();
+	explicit ManHandler();
 	~ManHandler();
 	void AddMan();
 private:

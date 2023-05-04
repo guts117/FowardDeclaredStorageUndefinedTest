@@ -12,7 +12,7 @@ struct alignas(alignof(void*)) ManHandler::Impl
 	}
 };
 
-ManHandler::ManHandler() = default;
+ManHandler::ManHandler() : m_pImpl{ Impl() } {}
 
 ManHandler::~ManHandler() = default;
 
