@@ -7,8 +7,10 @@
 
 int main()
 {
-    auto man_hndlr = ManHandler(); //       <-----Notice how this doesn't cause "use of undefined type ManHandler::Impl"
-    man_hndlr.AddMan();
+    auto man_hndlr = ManHandler();                  //<-----Notice how this doesn't cause "use of undefined type ManHandler::Impl"
+    man_hndlr.AddMan();                          
+    auto man_hndlrs = std::vector<ManHandler>();    // Neither does this
+    man_hndlrs.push_back(std::move(man_hndlr));     // But this does
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
