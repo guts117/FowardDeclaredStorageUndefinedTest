@@ -11,6 +11,8 @@ int main()
     man_hndlr.AddMan();                          
     auto man_hndlrs = std::vector<ManHandler>();    // Neither does this
     man_hndlrs.push_back(std::move(man_hndlr));     // But this does
+
+    std::cout << "Success" << std::endl;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
