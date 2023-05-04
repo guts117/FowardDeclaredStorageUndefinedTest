@@ -8,7 +8,7 @@ struct alignas(alignof(void*)) ManHandler::Impl
 	void AddMan()
 	{
 		//ToDo: Figure out why commenting this out gives a successful compile + run
-		men.push_back(Man{0, 1});
+		men.push_back(Man{0, 1});		//       <-----Notice how this doesn't cause "use of undefined type Man::Impl"
 	}
 };
 

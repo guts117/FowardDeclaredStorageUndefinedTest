@@ -7,7 +7,7 @@
 
 int main()
 {
-    auto man_hndlr = ManHandler();
+    auto man_hndlr = ManHandler(); //       <-----Notice how this doesn't cause "use of undefined type ManHandler::Impl"
     man_hndlr.AddMan();
 }
 
