@@ -20,7 +20,7 @@ private:
 	const Impl& Pimpl() const { return m_pImpl.Get(); }
 	Impl& Pimpl() { return m_pImpl.Get(); }
 
-	//Made this a forward declared storage to show how at main() creating ManHandler instance does cause the "use of undefined type ManHandler::Impl" issue
+	//Made this a forward declared storage to show how at main() creating ManHandler instance does not cause the "use of undefined type ManHandler::Impl" issue
 	ForwardDeclaredStorage<Impl, alignof(void*) * 4, alignof(void*)> m_pImpl;
 };
 
