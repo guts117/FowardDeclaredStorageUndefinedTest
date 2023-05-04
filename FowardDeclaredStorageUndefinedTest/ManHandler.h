@@ -5,6 +5,13 @@ class ManHandler
 {
 public:
 	explicit ManHandler();
+
+	ManHandler(ManHandler&& rhs) noexcept = default;
+	ManHandler& operator=(ManHandler&& rhs) noexcept = default;
+
+	ManHandler(const ManHandler& rhs) noexcept = delete;
+	ManHandler& operator=(const ManHandler& rhs) = delete;
+
 	~ManHandler();
 	void AddMan();
 private:

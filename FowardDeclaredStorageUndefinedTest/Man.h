@@ -4,6 +4,13 @@ class Man
 {
 public:
 	explicit Man() = delete;
+	
+	Man(Man&& rhs) noexcept = default;
+	Man& operator=(Man&& rhs) noexcept = default;
+	
+	Man(const Man& rhs) noexcept = delete;
+	Man& operator=(const Man& rhs) = delete;
+	
 	explicit Man(int id, int age);
 	~Man();
 private:
