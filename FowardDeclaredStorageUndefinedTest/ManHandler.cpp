@@ -1,0 +1,22 @@
+#include "ManHandler.h"
+#include "Man.h"
+
+struct alignas(alignof(void*)) ManHandler::Impl
+{
+	std::vector<Man> men;
+
+	void AddMan()
+	{
+		men.push_back(Man{0, 1});
+	}
+};
+
+ManHandler::ManHandler() = default;
+
+ManHandler::~ManHandler() = default;
+
+void ManHandler::AddMan() 
+{
+	Pimpl().AddMan();
+}
+
